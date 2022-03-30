@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Present For You</title>
+	<link rel="stylesheet" type="text/css" href="fire.css">
+	<script type="text/javascript" src="fire.js"></script>
+</head>
+<body>	
+<h1>HAPPY BIRTH DAY MY BEELOVED</h1>
+<canvas id="canvas"></canvas>
+<div class="popup" id="popup-1">
+	<div class="overlay"></div>
+	<div class="content">
+	<div class="close-btn" onclick="togglePopup()">&times;</div>
+		<h2>Dear My BeeLoved</h2>
+		<p>🎶Happy Birth Day to you kabogoh aku🎶<br> Hai cantik! Udah 21 taun aja nih, semoga urusan kamu dimudahkan yaa, semakin dekat buat meraih mimpi mimpi kamu! SEMANGAT! <br> I Wish You All The Best Cantikk!!! </p>
+	</div>
+	<div class="click">
+		<button onclick="togglePopup()">Love Letter</button>
+	</div>
+	<div class="right-col">
+		<p>Touch me</p>
+		<img src="song.png" id="icon">
+	</div>
+</div>
+
+<audio id="mySong">
+	<source src="song.mp3" type="audio/mp3">
+</audio>
+
+<script>
+	var mySong = document.getElementById("mySong");
+	var icon = document.getElementById("icon");
+
+	icon.onclick = function(){
+	if(mySong.paused){
+		mySong.play();	
+		icon.src = "pause.png";
+	}else{
+		mySong.pause();	
+		icon.src = "song.png";
+	}
+	
+}
+</script>
+
+</body>
+</html>
